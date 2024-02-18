@@ -1,24 +1,34 @@
-# Homework 3
-## 3 Levels Of Calculator Homework
+# Homework 4
+## Faker, Generating test data, and adding your package to command line app.
 
-In this repository, you can see that there are 3 branches:
+This assignment introduces three new features to the calculator app.
+- Use of Faker library for the generation of fake data.
+- Using of command line to generate N number of records dynamically for faker.
+- Introduction of main.py which serves as the main entry point of the app and also can be used in terminal with custom user inputs.
 
-1.  Main - Basic Calculator with functions
-![alt text](<Screenshot 2024-02-13 at 7.56.35 PM.png>)
-2.  Part 2 - Intermediate Calculator with static methods on Calculator class and instance methods on Calculation class to perform operations on the data in the calculation instance.
-![alt text](<Screenshot 2024-02-13 at 8.03.18 PM.png>)
-3.  Part 3 - Advanced Calculator 
-![alt text](<Screenshot 2024-02-13 at 8.03.42 PM.png>)
+In this repository, you can see that there are 3 newly created branches for three features that are merged using Pull Requests:
+1. faker - Add faker library to the calculator app and update the requirements.txt and test cases accordingly.
+![alt text](<Screenshot 2024-02-18 at 1.10.33 PM.png>)
 
-## Notes on Advanced Calculator
-The advanced calculator in part 3 contains static methods on the Calculator, instance methods on the Calculation, and class methods on the Calculations class.  In addition, it has more advanced testing that uses parameterized test data and a fixture to make it easy to setup each test with consistent data.  There are also modifciations to the .pylintrc file to control pylint's code analysis.
+2. command-line - Customize test cases with dynamic number of records for testing by adding new commandline to faker.
+![alt text](<Screenshot 2024-02-18 at 1.09.14 PM.png>)
 
-## Calculator functions are listed below:
+3. main-entry - Usage via terminal for the given tests:
+- a, b, operation, expected result
+- "5", "3", 'add', "The result of 5 add 3 is equal to 8"
+- "10", "2", 'subtract', "The result of 10 subtract 2 is equal to 8"
+- "4", "5", 'multiply', "The result of 4 multiply 5 is equal to 20"
+- "20", "4", 'divide', "The result of 20 divide 4 is equal to 5"
+- "1", "0", 'divide', "An error occurred: Cannot divide by zero"
+- "9", "3", 'unknown', "Unknown operation: unknown" # Test for unknown operation
+- "a", "3", 'add', "Invalid number input: a or 3 is not a valid number." # Testing invalid number input
+- "5", "b", 'subtract', "Invalid number input: 5 or b is not a valid number." # Testing another invalid number input
+![alt text](<Screenshot 2024-02-18 at 1.21.02 PM.png>)
 
-1.  Operations (add subtract, multiply, divide).
-2.  Exception throwing and testing on divide by zero.
-3.  Use of static, class, and instance methods correctly.
-4.  Has a calculation class that stores the arthitmentic operation in a instance property.
-5.  Has a calculation history to store calculation instances.
-6.  Has the convenience methods on the calculations class to manage the history.
-7.  Use parameterized test data.
+4. main - This is the default branch, where all the branches are merged.
+
+
+### Code merges that occured with pull requests:
+- faker branch : https://github.com/richa-bsingh/IS601-Homework4/pull/1
+- command-line branch : https://github.com/richa-bsingh/IS601-Homework4/pull/2
+- main-entry branch : https://github.com/richa-bsingh/IS601-Homework4/pull/3
